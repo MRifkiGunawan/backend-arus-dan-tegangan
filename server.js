@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 // Endpoint untuk menyimpan data ke database
 app.get('/', (req, res) => {
   try {
-    const { data } = req.body;
+    const { data } = req.query;
 
     if (!data) {
       return res.status(400).json({ success: false, message: 'Data harus diisi' });
